@@ -1,5 +1,6 @@
 package org.example;
 
 public class Computer {
-    Monitor monitor;
+    private Monitor monitor;
+    private Drive drive;
 }
