@@ -1,11 +1,14 @@
 package org.example;
 
+import org.example.drive.Drive;
+import org.example.usbdevice.USBDevice;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Computer {
-    private  Monitor monitor;
-    private  Drive drive;
+    private Monitor monitor;
+    private Drive drive;
     private HeadPhones headPhones;
 
     private final List<USBDevice> usbDevices = new ArrayList<>();
@@ -41,5 +44,22 @@ public class Computer {
 
     public List<USBDevice> getUsbDevices() {
         return usbDevices;
+    }
+
+    public void addUsbDevice(USBDevice usbDevice) {
+        boolean isConnected = usbDevice.connect();
+
+        if (isConnected) {
+            usbDevices.add(usbDevice);
+        }
+    }
+
+    public void removeUSBDevice(USBDevice usbDevice) {
+        boolean isDisconnected = usbDevice.disconnect();
+
+        if (!isDisconnected) {
+            System.out.println("Forcibly removed USB Device");
+        }
+        usbDevices.remove(usbDevice);
     }
 }
