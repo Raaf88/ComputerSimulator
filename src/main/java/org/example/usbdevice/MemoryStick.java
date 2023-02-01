@@ -1,7 +1,7 @@
 package org.example.usbdevice;
 
 public class MemoryStick implements USBDevice {
-    private String name;
+    private final String name;
     private boolean ejected = false;
 
     public MemoryStick(String name) {

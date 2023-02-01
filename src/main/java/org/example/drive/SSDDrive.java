@@ -1,13 +1,13 @@
 package org.example.drive;
 
-import org.example.File;
+import org.example.file.File;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 public class SSDDrive implements Drive {
-    Map<String, File> files = new HashMap<>();
+    private final Map<String, File> files = new HashMap<>();
 
     @Override
     public void addFile(File file) {

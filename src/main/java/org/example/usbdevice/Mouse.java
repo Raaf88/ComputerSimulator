@@ -1,7 +1,7 @@
 package org.example.usbdevice;
 
 public class Mouse implements USBDevice {
-    private String name;
+    private final String name;
 
     public Mouse(String name) {
         this.name = name;

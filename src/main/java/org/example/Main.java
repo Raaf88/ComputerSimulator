@@ -19,10 +19,9 @@ public class Main {
         Mouse mouse = new Mouse("Mouse");
 
         computer.addUsbDevice(memoryStick);
-        computer.addUsbDevice(mouse);
-        memoryStick.eject();
+     //  computer.addUsbDevice(mouse);
+      //  memoryStick.eject();
         computer.removeUSBDevice(memoryStick);
-        computer.removeUSBDevice(mouse);
 
     }
 }

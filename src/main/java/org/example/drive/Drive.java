@@ -1,6 +1,6 @@
 package org.example.drive;
 
-import org.example.File;
+import org.example.file.File;
 
 public interface Drive {
 
